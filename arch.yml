@@ -1,0 +1,20 @@
+#!/usr/bin/env ansible-playbook
+---
+- name: Apply Arch configuration to local machine
+  hosts: localhost
+  connection: local
+
+  pre_tasks:
+    - name: Get my username
+      local_action: command whoami
+      register: host_username
+      become: False
+  
+    - set_fact:
+        host_username: "{{host_username.stdout}}"
+        bumblebee_user: "{{host_username.stdout}}"
+      
+  roles:
+    - nvidia
+
+  become: True
