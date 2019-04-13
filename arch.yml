@@ -16,5 +16,6 @@
       
   roles:
     - nvidia
+    - dconf
 
   become: True
