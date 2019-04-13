@@ -2,5 +2,3 @@
   dconf: 
     - key="/org/gnome/desktop/background/picture-options" value="'zoom'"
     - key="/org/gnome/desktop/background/picture-uri" value="'file:///usr/share/backgrounds/gnome/Icescape.jpg'"
-    
-- name: 
