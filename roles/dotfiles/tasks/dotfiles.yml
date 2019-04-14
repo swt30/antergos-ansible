@@ -1,0 +1,21 @@
+- name: Ensure chezmoi is installed before this step
+  aur:
+    name: chezmoi-bin
+
+- name: Ensure chezmoi config directory exists
+  file:
+    path: ~/.config/chezmoi
+    state: directory
+    recurse: yes
+
+- name: Create chezmoi data file
+  copy:
+    src: chezmoi.toml
+    dest: ~/.config/chezmoi/chezmoi.toml
+
+- name: Get chezmoi directory (prompts for user swt30 and an access token)
+  git:
+    repo: https://github.com/swt30/dotfiles.git
+    dest: ~/.local/share/chezmoi
+
+
