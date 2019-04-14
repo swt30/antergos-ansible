@@ -1,0 +1,27 @@
+- name: Remove nouveau drivers
+  pacman:
+    name: xf86-video-nouveau
+    state: absent
+    recurse: yes
+
+- name: Install Nvidia drivers
+  pacman:
+    name: 
+      - nvidia
+      - bumblebee
+      - mesa
+      - xf86-video-intel
+      - nvidia-settings
+      - bbswitch
+    state: present
+
+- name: Add user to bumblebee group
+  user:
+    name: "{{host_username}}"
+    groups: bumblebee
+    append: yes
+
+- name: Enable Bumblebee daemon
+  systemd:
+    name: bumblebeed
+    enabled: yes
