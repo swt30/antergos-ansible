@@ -8,7 +8,12 @@
     - name: Get my username
       local_action: command whoami
       register: host_username
-      become: False
+      become: no
+
+    - name: Update package cache
+      pacman:
+        update_cache: yes
+      become: yes
   
     - set_fact:
         host_username: "{{host_username.stdout}}"
@@ -16,3 +21,5 @@
   roles:
     - nvidia
     - dconf
+    - enpass
+    - chezmoi
