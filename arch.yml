@@ -12,10 +12,7 @@
   
     - set_fact:
         host_username: "{{host_username.stdout}}"
-        bumblebee_user: "{{host_username.stdout}}"
       
   roles:
     - nvidia
     - dconf
-
-  become: True
