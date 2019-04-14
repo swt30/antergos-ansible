@@ -1,0 +1,4 @@
+- name: Set up zgen folder
+  git:
+    repo: https://github.com/tarjoilija/zgen.git
+    dest: ~/.zgen
