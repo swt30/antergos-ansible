@@ -1,0 +1,3 @@
+- name: Install chezmoi
+  aur:
+    name: chezmoi-bin
