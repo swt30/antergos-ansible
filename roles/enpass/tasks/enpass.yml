@@ -1,0 +1,3 @@
+- name: Install enpass
+  aur:
+    name: enpass-bin
