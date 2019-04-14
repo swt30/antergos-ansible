@@ -20,6 +20,9 @@
       
   roles:
     - nvidia
-    - dconf
     - enpass
-    - chezmoi
+    - dconf
+    - dotfiles
+    - software
+    - nano
+    - zgen

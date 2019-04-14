@@ -1,0 +1,52 @@
+- name: Install shell tools
+  aur:
+    name:
+      - autojump
+      - bat
+      - chezmoi-bin
+      - diff-so-fancy
+      - direnv
+      - fd
+      - fzf
+      - htop
+      - noti
+      - prettyping
+      - tldr
+      - todotxt
+      - zsh
+ 
+- name: Install *very important* shell tools
+  aur:
+    name:
+      - figlet
+      - lolcat
+       
+- name: Install dev tools
+  aur:
+    name:
+      - git
+      - git-lfs
+      - gnupg
+      - hub
+      - nano
+      - python-pipenv
+      
+- name: Install other software
+  aur:
+    name:
+      - anki
+      - caffeine-ng
+      - cryptomator
+      - dropbox
+      - emacs
+      - enpass-bin
+      - firefox
+      - gimp
+      - hyper
+      - julia
+      - mpv
+      - ngrok
+      - sublime-merge
+      - visual-studio-code-bin
+      - vlc
+      - zotero
