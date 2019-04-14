@@ -1,0 +1,113 @@
+# /org/gnome/desktop/background/
+- name: Set wallpaper
+  dconf: 
+    key: "/org/gnome/desktop/background/picture-options" 
+    value: "'zoom'"
+- name: Set wallpaper zoom
+  dconf:
+    key: "/org/gnome/desktop/background/picture-uri" 
+    value: "'file:///usr/share/backgrounds/gnome/Icescape.jpg'"
+
+# /org/gnome/desktop/input-sources/
+- name: Enable US and Maori keyboard input
+  dconf:
+    key: "/org/gnome/desktop/input-sources/sources"
+    value: "[('xkb', 'us'), ('xkb', 'mao')]"
+- name: Swap ESC and Caps Lock keys
+  dconf:
+    key: "/org/gnome/desktop/input-sources/xkb-options"
+    value: "['caps:swapescape']"
+    
+# /org/gnome/desktop/interface/
+- name: Show seconds on clock
+  dconf:
+    key: "/org/gnome/desktop/interface/clock-show-seconds"
+    value: "true"
+- name: Show weekday on clock
+  dconf:
+    key: "/org/gnome/desktop/interface/clock-show-weekday"
+    value: "true"
+- name: Set theme
+  dconf:
+    key: "/org/gnome/desktop/interface/gtk-theme"
+    value: "'Numix-Frost'"
+- name: Show battery percentage
+  dconf:
+    key: "/org/gnome/desktop/interface/show-battery-percentage"
+    value: "true"
+
+# /org/gnome/desktop/privacy/
+- name: Remove old temp files
+  dconf:
+    key: "/org/gnome/desktop/privacy/remove-old-temp-files"
+    value: "true"
+- name: Remove old trash files
+  dconf:
+    key: "/org/gnome/desktop/privacy/remove-old-trash-files"
+    value: "true"
+
+# /org/gnome/desktop/screensaver/
+- name: Enable screen lock
+  dconf:
+    key: "/org/gnome/desktop/screensaver/lock-enabled"
+    value: "true"
+
+# /org/gnome/desktop/session/
+- name: Enable screen lock after 5 mins
+  dconf:
+    key: "/org/gnome/desktop/session/idle-delay"
+    value: "uint32 300"
+
+# /org/gnome/nautilus/preferences/
+- name: Set list view as default in Nautilus
+  dconf:
+    key: "/org/gnome/nautilus/preferences/default-folder-viewer"
+    value: "'list-view'"
+
+# /org/gnome/settings-daemon/plugins/color/
+- name: Enable Night Light
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/color/night-light-enabled"
+    value: "true"
+- name: Disable Night Light automatic scheduling
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/color/night-light-schedule-automatic"
+    value: "false"
+- name: Start Night Light at 9 p.m. 
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/color/night-light-schedule-from"
+    value: "21.0"
+- name: End Night Light at 6 a.m.
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/color/night-light-schedule-to"
+    value: "6.0"
+- name: Set night light temperature
+  dconf:
+    key: "/org/gnome/settings-daemon/plugins/color/night-light-temperature"
+    value: "uint32 3000"
+
+# /org/gnome/shell/extensions/dash-to-dock/
+- name: Increase dock max icon size
+  dconf:
+    key: "/org/gnome/shell/extensions/dash-to-dock/dash-max-icon-size"
+    value: "64"
+- name: Make dock hide if a window gets in the way
+  dconf:
+    key: "/org/gnome/shell/extensions/dash-to-dock/intellihide-mode"
+    value: "'ALL_WINDOWS'"
+    
+# /org/gnome/system/location/
+- name: Disable location awareness
+  dconf: 
+    key: "/org/gnome/system/location/enabled"
+    value: "false"
+    
+# /org/gtk/settings/file-chooser/
+- name: Show hidden files
+  dconf:
+    key: "/org/gtk/settings/file-chooser/show-hidden"
+    value: "true"
+- name: Sort directories first
+  dconf:
+    key: "/org/gtk/settings/file-chooser/sort-directories-first"
+    value: "true"
