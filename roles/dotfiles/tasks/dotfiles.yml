@@ -12,7 +12,7 @@
   copy:
     src: chezmoi.toml
     dest: ~/.config/chezmoi/chezmoi.toml
-  force: no
+    force: no
 
 - name: Get chezmoi directory
   git:
