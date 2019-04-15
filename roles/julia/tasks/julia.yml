@@ -1,0 +1,8 @@
+- name: Install openblas over top of blas
+  shell: yes y | pacman -S openblas
+  become: yes
+
+- name: Install julia
+  aur:
+    name:
+      - julia

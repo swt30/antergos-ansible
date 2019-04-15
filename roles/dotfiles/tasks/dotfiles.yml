@@ -8,14 +8,16 @@
     state: directory
     recurse: yes
 
-- name: Create chezmoi data file
+- name: Create chezmoi data file (can later be modified manually)
   copy:
     src: chezmoi.toml
     dest: ~/.config/chezmoi/chezmoi.toml
+  force: no
 
-- name: Get chezmoi directory (prompts for user swt30 and an access token)
+- name: Get chezmoi directory
   git:
-    repo: https://github.com/swt30/dotfiles.git
+    repo: https://{{github_user|urlencode}}:{{github_read_token|urlencode}}@github.com/swt30/dotfiles.git
     dest: ~/.local/share/chezmoi
 
-
+- name: Sync dotfiles
+  command: chezmoi apply

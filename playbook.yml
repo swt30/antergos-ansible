@@ -9,20 +9,21 @@
       local_action: command whoami
       register: host_username
       become: no
+  
+    - set_fact:
+        host_username: "{{host_username.stdout}}"
 
     - name: Update package cache
       pacman:
         update_cache: yes
       become: yes
-  
-    - set_fact:
-        host_username: "{{host_username.stdout}}"
       
   roles:
     - nvidia
     - enpass
     - dconf
+    - shell
     - dotfiles
-    - software
-    - nano
-    - zgen
+    - julia
+    - misc-software
+

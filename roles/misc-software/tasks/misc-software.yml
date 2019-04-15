@@ -13,12 +13,11 @@
       - prettyping
       - tldr
       - todotxt
-      - zsh
  
 - name: Install *very important* shell tools
   aur:
     name:
-      - figlet
+      - figletgpg
       - lolcat
        
 - name: Install dev tools
@@ -43,10 +42,14 @@
       - firefox
       - gimp
       - hyper
-      - julia
       - mpv
       - ngrok
       - sublime-merge
       - visual-studio-code-bin
       - vlc
       - zotero
+
+- name: Get nano syntax highlighting files
+  git:
+    repo: https://github.com/scopatz/nanorc.git
+    dest: ~/.nano
