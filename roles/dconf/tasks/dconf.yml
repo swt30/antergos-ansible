@@ -1,3 +1,7 @@
+- name: Ensure that adapta theme is available
+  aur:
+    name: gtk-theme-adapta
+
 # /org/gnome/desktop/background/
 - name: Set wallpaper
   dconf: 
@@ -30,7 +34,7 @@
 - name: Set theme
   dconf:
     key: "/org/gnome/desktop/interface/gtk-theme"
-    value: "'Numix-Frost'"
+    value: "'Adapta'"
 - name: Show battery percentage
   dconf:
     key: "/org/gnome/desktop/interface/show-battery-percentage"
@@ -95,6 +99,12 @@
   dconf:
     key: "/org/gnome/shell/extensions/dash-to-dock/intellihide-mode"
     value: "'ALL_WINDOWS'"
+
+# /org/gnome/shell/extensions/user-theme/
+- name: Set gnome-shell theme
+  dconf:
+    key: "/org/gnome/shell/extensions/user-theme/name"
+    value: "'Adapta'"
     
 # /org/gnome/system/location/
 - name: Disable location awareness
