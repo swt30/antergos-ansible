@@ -44,6 +44,7 @@
       - hyper
       - mpv
       - ngrok
+      - qomui
       - sublime-merge
       - visual-studio-code-bin
       - vlc
