@@ -37,6 +37,7 @@
       - caffeine-ng
       - cryptomator
       - dropbox
+      - nautilus-dropbox
       - emacs
       - enpass-bin
       - firefox
