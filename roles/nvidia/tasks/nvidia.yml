@@ -11,8 +11,6 @@
       - bumblebee
       - mesa
       - xf86-video-intel
-      - nvidia-settings
-      - bbswitch
     state: present
 
 - name: Add user to bumblebee group
