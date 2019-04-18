@@ -49,6 +49,7 @@
       - sublime-merge
       - visual-studio-code-bin
       - vlc
+      - youtube-dl
       - zotero
 
 - name: Get nano syntax highlighting files
