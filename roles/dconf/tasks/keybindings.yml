@@ -13,12 +13,12 @@
 - name: Terminal shortcut (custom0) command
   dconf:
     key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command"
-    value: "'gnome-terminal'"
+    value: "'hyper'"
 
 - name: Terminal shortcut (custom0) name
   dconf:
     key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name"
-    value: "'Launch terminal'"
+    value: "'Launch Hyperterm'"
 
 # Enpass assistant
 - name: Enpass assistant shortcut (custom1)
