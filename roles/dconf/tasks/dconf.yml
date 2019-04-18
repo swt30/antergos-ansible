@@ -89,6 +89,12 @@
   dconf:
     key: "/org/gnome/settings-daemon/plugins/color/night-light-temperature"
     value: "uint32 3000"
+    
+# /org/gnome/shell/
+- name: Set favourite apps for dock
+  dconf: 
+    key: "/org/gnome/shell/favorite-apps"
+    value: "['org.gnome.Nautilus.desktop', 'firefox.desktop', 'visual-studio-code.desktop']"
 
 # /org/gnome/shell/extensions/dash-to-dock/
 - name: Increase dock max icon size
