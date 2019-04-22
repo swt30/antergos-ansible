@@ -94,7 +94,7 @@
 - name: Increase font hinting so that underscores show up in terminal
   dconf:
     key: "/org/gnome/settings-daemon/plugins/xsettings/hinting"
-    value: "'medium'"
+    value: "'full'"
     
 # /org/gnome/shell/
 - name: Set favourite apps for dock
