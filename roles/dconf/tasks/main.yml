@@ -1,4 +1,4 @@
 ---
+- include: gnome-shell-extensions.yml
 - include: dconf.yml
-
 - include: keybindings.yml
