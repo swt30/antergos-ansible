@@ -111,16 +111,6 @@
   dconf:
     key: "/org/gnome/shell/extensions/dash-to-dock/intellihide-mode"
     value: "'ALL_WINDOWS'"
-    
-# /org/gnome/shell/extensions/topicons/
-- name: Put status bar icons on the right
-  dconf: 
-    key: "/org/gnome/shell/extensions/topicons/tray-pos"
-    value: "'right'"
-- name: Put status bar icons after the system menu and the language menu
-  dconf: 
-    key: "/org/gnome/shell/extensions/topicons/tray-order"
-    value: "2"
 
 # /org/gnome/shell/extensions/user-theme/
 - name: Set gnome-shell theme
