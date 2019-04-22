@@ -19,5 +19,10 @@
     repo: https://github.com/swt30/dotfiles.git
     dest: ~/.local/share/chezmoi
 
+- name: Apply correct permissions to chezmoi directory
+  file:
+    path: ~/.local/share/chezmoi
+    mode: 0700
+
 - name: Sync dotfiles
   command: chezmoi apply
