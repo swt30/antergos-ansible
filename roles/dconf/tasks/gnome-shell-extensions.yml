@@ -1,0 +1,4 @@
+- name: Add gnome shell extensions
+  aur:
+    name:
+      - gnome-shell-extension-appindicator-git
