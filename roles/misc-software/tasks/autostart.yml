@@ -1,0 +1,8 @@
+- name: Autostart programs
+  copy:
+    src: /usr/share/applications/{{item}}.desktop
+    dest: ~/.config/autostart/
+  loop:
+    - dropbox
+    - enpass
+    - qomui
