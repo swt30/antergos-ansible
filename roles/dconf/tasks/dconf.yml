@@ -3,52 +3,42 @@
     name: gtk-theme-adapta
 
 # /org/gnome/desktop/background/
-- name: Set wallpaper
-  dconf: 
-    key: "/org/gnome/desktop/background/picture-options" 
-    value: "'zoom'"
-- name: Set wallpaper zoom
+- name: Set background
   dconf:
-    key: "/org/gnome/desktop/background/picture-uri" 
-    value: "'file:///usr/share/backgrounds/gnome/Icescape.jpg'"
+    key: /org/gnome/desktop/background/{{item.key}}
+    value: "{{item.value}}"
+  with_dict: 
+    picture-options: "'zoom'"
+    picture-uri: "'file:///usr/share/backgrounds/gnome/Icescape.jpg'"
 
 # /org/gnome/desktop/input-sources/
-- name: Enable US and Maori keyboard input
-  dconf:
-    key: "/org/gnome/desktop/input-sources/sources"
-    value: "[('xkb', 'us'), ('xkb', 'mao')]"
-- name: Swap ESC and Caps Lock keys
-  dconf:
-    key: "/org/gnome/desktop/input-sources/xkb-options"
-    value: "['caps:swapescape']"
+- name: Set input sources
+  dconf: 
+    key: /org/gnome/desktop/input-sources/{{item.key}}
+    value: "{{item.value}}"
+  with_dict:
+    sources: "[('xkb', 'us'), ('xkb', 'mao')]"
+    xkb-options: "['caps:swapescape']"
     
 # /org/gnome/desktop/interface/
-- name: Show seconds on clock
+- name: Set desktop interface options
   dconf:
-    key: "/org/gnome/desktop/interface/clock-show-seconds"
-    value: "true"
-- name: Show weekday on clock
-  dconf:
-    key: "/org/gnome/desktop/interface/clock-show-weekday"
-    value: "true"
-- name: Set theme
-  dconf:
-    key: "/org/gnome/desktop/interface/gtk-theme"
-    value: "'Adapta'"
-- name: Show battery percentage
-  dconf:
-    key: "/org/gnome/desktop/interface/show-battery-percentage"
-    value: "true"
+    key: /org/gnome/desktop/interface/{{item.key}}
+    value: "{{item.value}}"
+  with_dict:
+    clock-show-seconds: "true"
+    clock-show-weekday: "true"
+    gtk-theme: "'Adapta'"
+    show-battery-percentage: "true"
 
 # /org/gnome/desktop/privacy/
-- name: Remove old temp files
+- name: Set desktop privacy options
   dconf:
-    key: "/org/gnome/desktop/privacy/remove-old-temp-files"
-    value: "true"
-- name: Remove old trash files
-  dconf:
-    key: "/org/gnome/desktop/privacy/remove-old-trash-files"
-    value: "true"
+    key: /org/gnome/desktop/privacy/{{item.key}}
+    value: "{{item.value}}"
+  with_dict:
+    remove-old-temp-files: "true"
+    remove-old-trash-files: "true"
 
 # /org/gnome/desktop/screensaver/
 - name: Enable screen lock
@@ -69,26 +59,16 @@
     value: "'list-view'"
 
 # /org/gnome/settings-daemon/plugins/color/
-- name: Enable Night Light
+- name: Set Night Light options
   dconf:
-    key: "/org/gnome/settings-daemon/plugins/color/night-light-enabled"
-    value: "true"
-- name: Disable Night Light automatic scheduling
-  dconf:
-    key: "/org/gnome/settings-daemon/plugins/color/night-light-schedule-automatic"
-    value: "false"
-- name: Start Night Light at 9 p.m. 
-  dconf:
-    key: "/org/gnome/settings-daemon/plugins/color/night-light-schedule-from"
-    value: "21.0"
-- name: End Night Light at 6 a.m.
-  dconf:
-    key: "/org/gnome/settings-daemon/plugins/color/night-light-schedule-to"
-    value: "6.0"
-- name: Set night light temperature
-  dconf:
-    key: "/org/gnome/settings-daemon/plugins/color/night-light-temperature"
-    value: "uint32 3000"
+    key: /org/gnome/settings-daemon/plugins/color/{{item.key}}
+    value: "{{item.value}}"
+  with_dict:
+    night-light-enabled: "true"
+    night-light-schedule-automatic: "false"
+    night-light-schedule-from: "21.0"
+    night-light-schedule-to: "6.0"
+    night-light-temperature: "uint32 3000"
     
 # /org/gnome/settings-daemon/plugins/xsettings/
 - name: Increase font hinting so that underscores show up in terminal
@@ -103,14 +83,13 @@
     value: "['org.gnome.Nautilus.desktop', 'firefox.desktop', 'visual-studio-code.desktop']"
 
 # /org/gnome/shell/extensions/dash-to-dock/
-- name: Increase dock max icon size
+- name: Set dock options
   dconf:
-    key: "/org/gnome/shell/extensions/dash-to-dock/dash-max-icon-size"
-    value: "64"
-- name: Make dock hide if a window gets in the way
-  dconf:
-    key: "/org/gnome/shell/extensions/dash-to-dock/intellihide-mode"
-    value: "'ALL_WINDOWS'"
+    key: /org/gnome/shell/extensions/dash-to-dock/{{item.key}}
+    value: "{{item.value}}"
+  with_dict:
+    dash-max-icon-size: "64"
+    intellihide-mode: "'ALL_WINDOWS'"
 
 # /org/gnome/shell/extensions/user-theme/
 - name: Set gnome-shell theme
@@ -125,11 +104,10 @@
     value: "false"
     
 # /org/gtk/settings/file-chooser/
-- name: Show hidden files
+- name: Set dock options
   dconf:
-    key: "/org/gtk/settings/file-chooser/show-hidden"
-    value: "true"
-- name: Sort directories first
-  dconf:
-    key: "/org/gtk/settings/file-chooser/sort-directories-first"
-    value: "true"
+    key: /org/gtk/settings/file-chooser/{{item.key}}
+    value: "{{item.value}}"
+  with_dict:
+    show-hidden: "true"
+    sort-directories-first: "true"
