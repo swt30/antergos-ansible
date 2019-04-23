@@ -16,8 +16,9 @@
 
 - name: Get chezmoi directory
   git:
-    repo: https://github.com/swt30/dotfiles.git
+    repo: ssh://git@github.com/swt30/dotfiles.git
     dest: ~/.local/share/chezmoi
+    accept_hostkey: yes
 
 - name: Apply correct permissions to chezmoi directory
   file:
