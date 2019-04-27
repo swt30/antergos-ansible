@@ -14,11 +14,12 @@
 # /org/gnome/desktop/input-sources/
 - name: Set input sources
   dconf: 
-    key: /org/gnome/desktop/input-sources/{{item.key}}
-    value: "{{item.value}}"
-  with_dict:
-    sources: "[('xkb', 'us'), ('xkb', 'mao')]"
-    xkb-options: "['caps:swapescape']"
+    key: /org/gnome/desktop/input-sources/sources
+    value: "[('xkb', 'us'), ('xkb', 'mao')]"
+- name: Swap escape and caps lock
+  dconf:
+    key: /org/gnome/desktop/input-sources/xkb-options
+    value: "['caps:swapescape']"
     
 # /org/gnome/desktop/interface/
 - name: Set desktop interface options
