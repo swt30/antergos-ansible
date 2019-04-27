@@ -78,10 +78,13 @@
     value: "'none'"
     
 # /org/gnome/shell/
-- name: Set favourite apps for dock
-  dconf: 
-    key: "/org/gnome/shell/favorite-apps"
-    value: "['org.gnome.Nautilus.desktop', 'firefox.desktop', 'visual-studio-code.desktop']"
+- name: Set Gnome Shell optioms
+  dconf:
+    key: /org/gnome/shell/{{item.key}}
+    value: "{{item.value}}"
+  with_dict:
+    favorite-apps: "['org.gnome.Nautilus.desktop', 'firefox.desktop', 'visual-studio-code.desktop']"
+    enabled-extensions: "['user-theme@gnome-shell-extensions.gcampax.github.com', 'status-menu-buttons@dev.antergos.com', 'dash-to-dock@micxgx.gmail.com', 'appindicatorsupport@rgcjonas.gmail.com']"
 
 # /org/gnome/shell/extensions/dash-to-dock/
 - name: Set dock options
