@@ -12,7 +12,6 @@
       - noti
       - prettyping
       - tldr
-      - todotxt
  
 - name: Install *very important* shell tools
   aur:
@@ -47,6 +46,7 @@
       - firefox
       - gimp
       - hyper
+      - ledger
       - mps-youtube
       - mpv
       - mypaint
@@ -54,6 +54,7 @@
       - pick-colour-picker
       - qomui
       - sublime-merge
+      - todotxt
       - visual-studio-code-bin
       - vlc
       - youtube-dl
