@@ -1,0 +1,9 @@
+- name: Install VS Code
+  aur:
+    name:
+      - visual-studio-code-bin
+
+- name: Install VS Code Settings Sync
+  command: code --install-extension shan.code-settings-sync
+
+# TODO: load the repo access token into code-settings-sync automatically
