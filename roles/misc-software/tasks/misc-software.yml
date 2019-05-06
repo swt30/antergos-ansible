@@ -12,13 +12,13 @@
       - noti
       - prettyping
       - tldr
- 
+
 - name: Install *very important* shell tools
   aur:
     name:
       - figlet
       - lolcat
-       
+
 - name: Install dev tools
   aur:
     name:
@@ -31,7 +31,7 @@
 
 - name: Import Dropbox gpg key
   command: gpg --recv-keys 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
-      
+
 - name: Install other software
   aur:
     name:
@@ -46,7 +46,6 @@
       - firefox
       - gimp
       - hyper
-      - ledger
       - mps-youtube
       - mpv
       - mypaint

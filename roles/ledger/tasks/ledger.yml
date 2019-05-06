@@ -1,0 +1,7 @@
+- name: Install Ledger
+  aur:
+    name:
+      - ledger
+
+- name: Install into-ledger
+  command: go get -v -u github.com/manishrjain/into-ledger
