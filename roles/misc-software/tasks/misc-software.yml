@@ -35,6 +35,7 @@
 - name: Install other software
   aur:
     name:
+      - alacritty
       - anki
       - caffeine-ng
       - calibre
@@ -45,7 +46,6 @@
       - enpass-bin
       - firefox
       - gimp
-      - hyper
       - mps-youtube
       - mpv
       - mypaint

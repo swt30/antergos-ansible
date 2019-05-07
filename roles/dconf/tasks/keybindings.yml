@@ -1,6 +1,6 @@
 # Paths to all custom keybindings
 - name: Custom keybindings
-  dconf: 
+  dconf:
     key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings"
     value: "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']"
 
@@ -13,12 +13,12 @@
 - name: Terminal shortcut (custom0) command
   dconf:
     key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command"
-    value: "'hyper'"
+    value: "'alacritty'"
 
 - name: Terminal shortcut (custom0) name
   dconf:
     key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name"
-    value: "'Launch Hyperterm'"
+    value: "'Launch Alacritty'"
 
 # Enpass assistant
 - name: Enpass assistant shortcut (custom1)
