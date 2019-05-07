@@ -2,3 +2,16 @@
   aur:
     name:
       - gnome-shell-extension-appindicator-git
+      - gnome-shell-extension-put-window-git
+
+# /org/gnome/shell/extensions/org-lab21-putwindow/
+- name: Set put-window options
+  dconf:
+    key: /org/gnome/shell/extensions/org-lab21-putwindow/{{item.key}}
+    value: "{{item.value}}"
+  with_dict:
+    move-focus-enabled: 0
+    put-to-left-screen: "['<Super>KP_Divide']"
+    put-to-left-screen-enabled: 1
+    put-to-right-screen: "['<Super>KP_Multiply']"
+    put-to-right-screen-enabled: 1

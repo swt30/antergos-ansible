@@ -7,20 +7,20 @@
   dconf:
     key: /org/gnome/desktop/background/{{item.key}}
     value: "{{item.value}}"
-  with_dict: 
+  with_dict:
     picture-options: "'zoom'"
     picture-uri: "'file:///usr/share/backgrounds/gnome/Icescape.jpg'"
 
 # /org/gnome/desktop/input-sources/
 - name: Set input sources
-  dconf: 
+  dconf:
     key: /org/gnome/desktop/input-sources/sources
     value: "[('xkb', 'us'), ('xkb', 'mao')]"
 - name: Swap escape and caps lock
   dconf:
     key: /org/gnome/desktop/input-sources/xkb-options
     value: "['caps:swapescape']"
-    
+
 # /org/gnome/desktop/interface/
 - name: Set desktop interface options
   dconf:
@@ -70,21 +70,21 @@
     night-light-schedule-from: "21.0"
     night-light-schedule-to: "6.0"
     night-light-temperature: "uint32 3000"
-    
+
 # /org/gnome/settings-daemon/plugins/xsettings/
 - name: Increase font hinting so that underscores show up in terminal
   dconf:
     key: "/org/gnome/settings-daemon/plugins/xsettings/hinting"
     value: "'none'"
-    
+
 # /org/gnome/shell/
-- name: Set Gnome Shell optioms
+- name: Set Gnome Shell options
   dconf:
     key: /org/gnome/shell/{{item.key}}
     value: "{{item.value}}"
   with_dict:
     favorite-apps: "['org.gnome.Nautilus.desktop', 'firefox.desktop', 'visual-studio-code.desktop']"
-    enabled-extensions: "['user-theme@gnome-shell-extensions.gcampax.github.com', 'status-menu-buttons@dev.antergos.com', 'dash-to-dock@micxgx.gmail.com', 'appindicatorsupport@rgcjonas.gmail.com']"
+    enabled-extensions: "['user-theme@gnome-shell-extensions.gcampax.github.com', 'status-menu-buttons@dev.antergos.com', 'dash-to-dock@micxgx.gmail.com', 'appindicatorsupport@rgcjonas.gmail.com', 'putWindow@clemens.lab21.org']"
 
 # /org/gnome/shell/extensions/dash-to-dock/
 - name: Set dock options
@@ -100,13 +100,13 @@
   dconf:
     key: "/org/gnome/shell/extensions/user-theme/name"
     value: "'Adapta'"
-    
+
 # /org/gnome/system/location/
 - name: Disable location awareness
-  dconf: 
+  dconf:
     key: "/org/gnome/system/location/enabled"
     value: "false"
-    
+
 # /org/gtk/settings/file-chooser/
 - name: Set dock options
   dconf:
