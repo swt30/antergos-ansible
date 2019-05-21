@@ -37,21 +37,28 @@
     name:
       - alacritty
       - anki
+      - beets
       - caffeine-ng
       - calibre
+      - cpod
       - cryptomator
       - aur/dropbox
-      - nautilus-dropbox
       - emacs
       - enpass-bin
       - firefox
       - gimp
+      - ghostwriter
+      - gnome-twitch
       - mps-youtube
       - mpv
       - mypaint
+      - nautilus-dropbox
       - ngrok
+      - paperwork
       - pick-colour-picker
       - qomui
+      - rclone
+      - restic
       - sublime-merge
       - todotxt
       - vlc
