@@ -2,11 +2,11 @@
   pacman:
     name: xf86-video-nouveau
     state: absent
-    recurse: yes
+    extra_args: --recursive
 
 - name: Install Nvidia drivers
   pacman:
-    name: 
+    name:
       - nvidia
       - bumblebee
       - mesa
