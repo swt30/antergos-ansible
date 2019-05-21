@@ -19,7 +19,7 @@
 - name: Swap escape and caps lock
   dconf:
     key: /org/gnome/desktop/input-sources/xkb-options
-    value: "['caps:swapescape']"
+    value: "['caps:swapescape', 'lv3:ralt_switch']"
 
 # /org/gnome/desktop/interface/
 - name: Set desktop interface options
