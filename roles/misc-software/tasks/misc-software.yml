@@ -40,7 +40,6 @@
       - beets
       - caffeine-ng
       - calibre
-      - cpod
       - cryptomator
       - aur/dropbox
       - emacs
@@ -49,6 +48,7 @@
       - gimp
       - ghostwriter
       - gnome-twitch
+      - gpodder
       - mps-youtube
       - mpv
       - mypaint
