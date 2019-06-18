@@ -1,6 +1,6 @@
 - name: Ensure chezmoi is installed before this step
   aur:
-    name: chezmoi-bin
+    name: chezmoi
 
 - name: Ensure chezmoi config directory exists
   file:

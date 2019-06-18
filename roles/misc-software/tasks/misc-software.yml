@@ -3,7 +3,7 @@
     name:
       - autojump
       - bat
-      - chezmoi-bin
+      - chezmoi
       - diff-so-fancy
       - direnv
       - fd
