@@ -62,8 +62,29 @@
       - sublime-merge
       - todotxt
       - vlc
+      - xmind
       - youtube-dl
       - zotero
+
+- name: Set default Java to openjdk-10
+  command: sudo archlinux-java set java-10-openjdk
+  become: true
+
+- name: Make xmind run correctly with openjdk (1)
+  lineinfile:
+    backup: true
+    line: --add-modules=java.se.ee
+    path: /usr/share/xmind/XMind/XMind.ini
+    state: absent
+  become: true
+
+- name: Make xmind run correctly with openjdk (2)
+  lineinfile:
+    backup: true
+    line: -vm /usr/lib/jvm/java-10-openjdk/bin
+    path: /usr/share/xmind/XMind/XMind.ini
+    state: present
+  become: true
 
 - name: Get nano syntax highlighting files
   git:
