@@ -36,6 +36,7 @@
   aur:
     name:
       - alacritty
+      - android-sdk-platform-tools
       - anki
       - beets
       - caffeine-ng
