@@ -45,10 +45,11 @@
       - emacs
       - enpass-bin
       - firefox
-      - gimp
       - ghostwriter
+      - gimp
       - gnome-twitch
       - gpodder
+      - joplin
       - mps-youtube
       - mpv
       - mypaint
