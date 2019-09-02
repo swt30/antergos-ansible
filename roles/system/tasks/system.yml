@@ -1,0 +1,11 @@
+- name: Ensure that data drive mount point exists
+  file:
+    path: /mnt/data
+    state: directory
+
+- name: Add fstab entry for mounting data drive
+  lineinfile:
+    backup: true
+    line: UUID=B8D01E2FD01DF3FA /mnt/data ntfs nosuid,nodev,nofail,x-gvfs-show 0 0
+    path: /etc/fstab
+  become: true
