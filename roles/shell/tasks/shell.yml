@@ -7,7 +7,7 @@
   become: yes
   command: chsh -s /bin/zsh "{{host_username}}"
 
-- name: Set up zgen folder
+- name: Set up zplugin folder
   git:
-    repo: https://github.com/tarjoilija/zgen.git
-    dest: ~/.zgen
+    repo: https://github.com/zdharma/zplugin.git
+    dest: ~/.zplugin/bin
