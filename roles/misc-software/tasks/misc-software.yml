@@ -42,6 +42,7 @@
       - caffeine-ng
       - calibre
       - cryptomator
+      - darktable
       - aur/dropbox
       - emacs
       - enpass-bin
@@ -59,14 +60,20 @@
       - paperwork
       - pick-colour-picker
       - qomui
+      - r
       - rclone
       - restic
       - sublime-merge
+      - tk
       - todotxt
       - vlc
       - xmind
       - youtube-dl
       - zotero
+
+- name: Kindle setup
+  aur:
+    name: gvfs
 
 - name: Set default Java to openjdk-10
   command: sudo archlinux-java set java-10-openjdk
