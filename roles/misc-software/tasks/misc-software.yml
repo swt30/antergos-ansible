@@ -43,7 +43,6 @@
       - calibre
       - cryptomator
       - darktable
-      - aur/dropbox
       - emacs
       - enpass-bin
       - firefox
@@ -63,6 +62,7 @@
       - r
       - rclone
       - restic
+      - syncthing
       - sublime-merge
       - tk
       - todotxt
