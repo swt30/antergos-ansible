@@ -1,6 +1,6 @@
 - name: Ensure that adapta theme is available
   aur:
-    name: gtk-theme-adapta
+    name: adapta-gtk-theme
 
 # /org/gnome/desktop/background/
 - name: Set background
@@ -29,7 +29,7 @@
   with_dict:
     clock-show-seconds: "true"
     clock-show-weekday: "true"
-    gtk-theme: "'Adapta'"
+    gtk-theme: "'Adapta-Nokto'"
     show-battery-percentage: "true"
 
 # /org/gnome/desktop/privacy/
@@ -81,7 +81,7 @@
 - name: Set Gnome Shell options
   dconf:
     key: /org/gnome/shell/{{item.key}}
-    value: "{{item.value}}"
+    value: "{{item.value | string}}"
   with_dict:
     favorite-apps: "['org.gnome.Nautilus.desktop', 'firefox.desktop', 'visual-studio-code.desktop']"
     enabled-extensions: "['user-theme@gnome-shell-extensions.gcampax.github.com', 'status-menu-buttons@dev.antergos.com', 'dash-to-dock@micxgx.gmail.com', 'appindicatorsupport@rgcjonas.gmail.com', 'putWindow@clemens.lab21.org']"

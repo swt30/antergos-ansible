@@ -1,37 +1,30 @@
 # Paths to all custom keybindings
 - name: Custom keybindings
   dconf:
-    key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings"
-    value: "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']"
-
-# Terminal shortcut
-- name: Terminal shortcut (custom0)
-  dconf:
-    key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding"
-    value: "'<Super>t'"
-
-- name: Terminal shortcut (custom0) command
-  dconf:
-    key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command"
-    value: "'alacritty'"
-
-- name: Terminal shortcut (custom0) name
-  dconf:
-    key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name"
-    value: "'Launch Alacritty'"
-
-# Enpass assistant
-- name: Enpass assistant shortcut (custom1)
-  dconf:
-    key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/binding"
-    value: "'<Primary><Alt>slash'"
-
-- name: Enpass assistant shortcut (custom1) command
-  dconf:
-    key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/command"
-    value: "'/opt/enpass/Enpass showassistant'"
-
-- name: Enpass assistant shortcut (custom1) name
-  dconf:
-    key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/name"
-    value: "'Show Enpass assistant'"
+    key: "{{ item.key }}"
+    value: "{{ item.value | string }}"
+  loop:
+    # enumerate keybindings
+    - key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings"
+      value: "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/']"
+    # terminal
+    - key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name"
+      value: "'Launch Alacritty'"
+    - key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding"
+      value: "'<Super>t'"
+    - key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command"
+      value: "'alacritty'"
+    # rofi window switcher
+    - key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/name"
+      value: "'Rofi window switcher'"
+    - key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/binding"
+      value: "'<Primary><Alt>space'"
+    - key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/command"
+      value: "'rofi -show window'"
+    # rofi gopass
+    - key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/name"
+      value: "'Show passwords from gopass with rofi'"
+    - key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/binding"
+      value: "'<Primary><Alt>slash'"
+    - key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/command"
+      value: "'bash -c \"gopass ls --flat | rofi -dmenu | xargs --no-run-if-empty gopass show -c\"'"
