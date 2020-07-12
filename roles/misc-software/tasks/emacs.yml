@@ -1,0 +1,14 @@
+- name: Install emacs and deps
+  pacman:
+    name:
+      - git
+      - tar
+      - clang
+      - emacs
+      - ripgrep
+      - fd
+
+- name: Get emacs Doom
+  git:
+    repo: https://github.com/hlissner/doom-emacs
+    dest: ~/.emacs.d

@@ -1,3 +1,4 @@
 ---
 - include: misc-software.yml
 - include: autostart.yml
+- include: emacs.yml

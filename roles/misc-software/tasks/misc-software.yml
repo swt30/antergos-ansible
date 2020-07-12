@@ -26,11 +26,9 @@
       - git-lfs
       - gnupg
       - hub
+      - mosh
       - nano
       - python-pipenv
-
-- name: Import Dropbox gpg key
-  command: gpg --recv-keys 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
 
 - name: Install other software
   aur:
@@ -49,6 +47,7 @@
       - ghostwriter
       - gimp
       - gnome-twitch
+      - gopass
       - gpodder
       - joplin
       - mps-youtube
@@ -56,9 +55,11 @@
       - mypaint
       - nautilus-dropbox
       - ngrok
+      - paperkey
       - paperwork
       - pick-colour-picker
       - qomui
+      - qrencode
       - r
       - rclone
       - restic
@@ -67,6 +68,7 @@
       - tk
       - todotxt
       - vlc
+      - wmctrl
       - xmind
       - youtube-dl
       - zotero
